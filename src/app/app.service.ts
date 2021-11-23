@@ -8,10 +8,12 @@ export class AppService {
 
   constructor(private http:HttpClient) { }
 
-  doLogin(emailOrPhone:string,password?:string){
+  doLogin(emailOrPhone:string,password:string){
     return this.http.post('https://private-3923c4-santandercoders809.apiary-mock.com/login',{
         emailOrPhone:emailOrPhone,
         password:password
+    },{
+      responseType:'text'
     })
   }
 
