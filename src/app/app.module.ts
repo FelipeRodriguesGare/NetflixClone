@@ -10,6 +10,7 @@ import { LoginComponent } from './login/login.component';
 import { UsersComponent } from './users/users.component';
 import { MainComponent } from './main/main.component';
 import { FooterComponent } from './footer/footer.component';
+import { UserCardComponent } from './user-card/user-card.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { FooterComponent } from './footer/footer.component';
     LoginComponent,
     UsersComponent,
     MainComponent,
-    FooterComponent
+    FooterComponent,
+    UserCardComponent
   ],
   imports: [
     BrowserModule,
