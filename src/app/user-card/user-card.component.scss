@@ -1,0 +1,60 @@
+.userContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-right: 20px;
+    margin: 0 2vw 0 0;
+    color: #808080;
+    cursor: pointer;
+    position: relative;
+}
+
+p {
+    margin-top: 16px;
+    font-size: 1.3vw
+}
+
+.avatarImg {
+    width: 10vw;
+    height: 10vw;   
+    border-radius: 5px;
+    min-width: 84px;
+    min-height: 84px;
+}
+
+.userContainer:hover .avatarImg {
+    box-shadow: 0px 0px 0px 2px white;
+}
+
+.userContainer:hover p {
+    color: white;
+}
+
+.editOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #141414;
+    opacity: 40%;
+}
+
+.editIcon {
+    opacity: 100%;
+    position: absolute;
+    top:30%;
+    left:40%;
+    width: 2.5vw;
+    height: 2.5vw;
+}
+
+@media screen and (max-width: 800px) {
+    
+    p {
+        font-size: 13px !important;
+    }
+    
+
+}

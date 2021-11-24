@@ -1,1 +1,8 @@
-<p>user-card works!</p>
+<div class = "userContainer" (click)="userEnterAplication()">
+    <div *ngIf="edit">
+        <div class="editOverlay"></div>
+        <img class="editIcon" src="../../assets/images/pencil.png" alt="">
+    </div>
+    <img class="avatarImg"src="{{ user.avatarUrl }}" alt="">
+    <p>{{user.name}}</p>
+</div>

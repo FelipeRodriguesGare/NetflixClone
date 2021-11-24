@@ -1,6 +1,85 @@
 .usersContainer {
-    background-color: var(--netflixPreto);
+    background-color: var(--netflixPretoFosco);
     width: 100vw;
     height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
+h1 {
+    color: white;
+    font-size: 3.7vw;
+    margin-bottom: 2.8vw;
+}
+
+.imagesContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    background:none;
+    border: none;
+}
+
+.buttonProfile{
+    border: 1px solid grey;
+    padding: 1.1vh 1.5vw;
+    cursor: pointer;
+    background-color: transparent;
+    margin-top: 5vw;
+}
+
+.buttonProfile:hover {
+    border: white solid 1px;
+}
+
+.buttonProfile:hover span  {
+    color: white;
+}
+
+.finishEditButton {
+    background-color: white;
+    border-color: white;
+    font-weight: 800;
+}
+
+.finishEditButton span {
+    color: black;
+}
+
+.finishEditButton:hover {
+    background-color: var(--netflixVermelho);
+    color: white;
+    border-color: var(--netflixVermelho);
+}
+
+.finishEditButton:hover span {
+    color: white;    
+}
+
+span {
+    font-size: 2vw;
+    letter-spacing: 2px;
+    color: #808080;
+    font-size: 1.2vw;
+}
+
+@media screen and (max-width: 800px) {
+    
+    h1 {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+
+    span {
+        font-size: 13px;
+    }
+    
+    .buttonProfile {
+        margin-top: 26px;
+    }
+}

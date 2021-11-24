@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { AppService, userResponse } from './app.service';
-import { UserCardComponent } from './user-card/user-card.component';
+import { AppService } from './app.service';
 
 @Component({
   selector: 'app-root',
@@ -12,6 +11,6 @@ export class AppComponent {
   constructor (private router:Router, private http: AppService) { }
   
   ngOnInit() {
-
+    this.router.navigate(['home'])
   }
 }

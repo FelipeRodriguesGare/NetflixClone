@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200&display=swap');
+
+* {
+    font-family: 'Martel Sans', sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+}
+
+.boxLogin {
+    display: flex;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 310px;
+    height: 480px;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+.loginInfo {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    margin-top: 60px;
+    margin-left: 40px;
+}
+
+input {
+    width: 220px;
+    height: 30px;
+    border-radius: 3px;
+    background-color: #333333;
+    color: white;
+    border: none;
+    margin-bottom: 15px;
+    padding-left: 10px;
+    font-size: 12px;
+}
+
+h1 {
+    color: white;
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+button {
+    width: 230px;
+    height: 35px;
+    border-radius: 10px;
+    border: none;
+    background-color: #E50914;
+    color: white;
+    font-size: 12px;
+    font-weight: 200;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 9px;
+    width: 230px;
+    margin-top: 5px;
+    color: white;
+}
