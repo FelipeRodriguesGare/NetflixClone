@@ -3,12 +3,12 @@ $netflixPreto: #000000;
 $netflixCinza: #E5E5E5;
 
 .mainContainer {
+    color: white;
+    text-align: center;
     background-color: #000000;
 }
 
 .containerOne {
-    color: white;
-    text-align: center;
     background-color: $netflixPreto;
     background-image: url(../../assets/images/netflixBackground1.png);
     background-position: center;
@@ -55,19 +55,45 @@ $netflixCinza: #E5E5E5;
     background-color: #FD000D;
 }
 
+// -----
 .containerTwo {
-width: 100vw;
-   height: 50vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-bottom: 10px solid #222222;
+    padding: 20px 0;
 }
 
-.containerTwo {
-    color: white;
-    text-align: center;
-    background-color: $netflixPreto;
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    border-bottom: 10px solid #222222
+.containerTwo section {
+    min-width: 400px;
 }
+
+.containerTwoText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 20px;
+    text-align: left;
+    max-width: 600px;
+}
+.containerTwoText h1 {
+    font-size: 3rem;
+}
+.containerTwoText h3 {
+    margin-top: 20px;
+    font-size: 1.6rem;
+
+}
+
+.imageSection {
+    position: relative;
+    justify-content: center;
+}
+
+.logoTv {
+    position: absolute;
+    top: 35%;
+    left: 35%;
+}
+//----
