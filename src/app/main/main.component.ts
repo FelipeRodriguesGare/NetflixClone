@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output } from '@angular/core';
-import { AppService } from '../app.service';
+import { AppService, serie, seriesID } from '../app.service';
 
 @Component({
   selector: 'app-main',
@@ -9,7 +9,8 @@ import { AppService } from '../app.service';
 export class MainComponent implements OnInit {
 
   userIDs:number[] = [];
-  series:Object[]  = []
+  series:Array<serie> = [];
+  cardImage:string = ''
 
   constructor(private appService:AppService) { }
 
@@ -21,17 +22,32 @@ export class MainComponent implements OnInit {
     })
     
   }
+  
+ 
+ getSeries(idsList:number[]){
+    idsList.map((id,index)=>{
+      this.appService.getSeriesInfo(id).subscribe((serie:serie)=>{
+        serie.id = id
+        serie.isKeepWatching = false
+        let serieWithID:serie =  serie;
+        let isKeepWatching:boolean = false
 
-  getSeries(idsList:number[]){
-    idsList.map(id=>{
-      this.appService.getSeriesInfo(id).subscribe(serie=>{
-        this.series.push(serie)
+        serieWithID.id = Number(index+1)
+
+        this.appService.getUserInfo(1).subscribe((categories:seriesID)=>{
+          categories.keepWatching.includes(serieWithID.id)?isKeepWatching = true: isKeepWatching =  false
+          serieWithID.isKeepWatching =  isKeepWatching
+        })
+        this.series.push(serieWithID)
       })
     })
   }
+
+
   ngOnInit(): void {
     
     this.getSeriesID(1)
+    console.log(this.series)
   }
 
 }
