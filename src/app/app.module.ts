@@ -11,6 +11,8 @@ import { UsersComponent } from './users/users.component';
 import { MainComponent } from './main/main.component';
 import { FooterComponent } from './footer/footer.component';
 import { UserCardComponent } from './user-card/user-card.component';
+import { SeriesCardComponent } from './main/series-card/series-card.component';
+import { CategoryCarrouselComponent } from './main/category-carrousel/category-carrousel.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { UserCardComponent } from './user-card/user-card.component';
     UsersComponent,
     MainComponent,
     FooterComponent,
-    UserCardComponent
+    UserCardComponent,
+    SeriesCardComponent,
+    CategoryCarrouselComponent
   ],
   imports: [
     BrowserModule,
