@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 
 
-interface links {
+export interface links {
   text:string,
   link?:string
 }

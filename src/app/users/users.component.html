@@ -1,5 +1,10 @@
 <div class="usersContainer">
-    <!-- <div *ngFor="let user of users"> -->
-        <!-- <app-user-card [user]="user"></app-user-card> -->
-    <!-- </div> -->
+    <h1>Quem está assistindo?</h1>
+    <ul class="imagesContainer">
+        <li *ngFor="let user of users"><app-user-card [user]="user" [edit]="edit"></app-user-card></li>
+    </ul>
+    <div class="buttonProfile" [ngClass]="{'finishEditButton':edit}" (click)="toggleEdit()">
+        <button type="button" *ngIf="!edit"><span>Gerencias perfis</span></button>
+        <button type="button" *ngIf="edit"><span>Concluído</span></button>
+    </div>
 </div>

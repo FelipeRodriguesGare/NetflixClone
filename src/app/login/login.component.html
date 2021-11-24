@@ -1,1 +1,13 @@
-<p>login works!</p>
+<div class="container">
+    <div class="boxLogin">
+        <div class="loginInfo">
+            <h1>Entrar</h1>
+            <input #emailPhone type="text" placeholder="Email ou número de telefone" id="">
+            <input #password type="password" placeholder="senha" id="">
+            <br>
+            <button (click)='logIn(emailPhone.value, password.value)'>Entrar</button>
+            <p>Essa página é protegida pelo google reCAPTCHA para garantir que você não é um robô. <a>Saiba mais</a></p>
+        </div>
+    </div>
+</div>
+<app-footer [links]="footerInfo" [contactInfo]="contactInfo"></app-footer>

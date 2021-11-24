@@ -1,16 +1,17 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
-
 export interface userResponse{
   "token": string,
   "users": [
-    {
-      "id": number,
-      "name": string,
-      "avatarUrl": string
-    }
+    users    
   ]
+}
+
+export interface users {
+  "id": number,
+  "name": string,
+  "avatarUrl": string
 }
 
 @Injectable({
@@ -18,7 +19,15 @@ export interface userResponse{
 })
 export class AppService {
 
-  constructor(private http:HttpClient) { }
+  constructor(private http:HttpClient) { 
+    
+  }
+
+  user: userResponse = {token: '', users: [{
+    "id": 0,
+    "name": '',
+    "avatarUrl": ''
+  }]};
 
   treatResponse (response:string) {
     var re = /"users"/gi;
