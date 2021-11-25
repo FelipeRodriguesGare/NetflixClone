@@ -45,6 +45,7 @@ export class AppService {
     
   }
 
+  //Criado para recebimento do retorno do POST
   user: userResponse = {token: '', users: [{
     "id": 0,
     "name": '',
