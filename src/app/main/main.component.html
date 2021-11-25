@@ -1,13 +1,2 @@
-
-<h2>POPULAR</h2>
-<div *ngFor="let serie of series">
-    
-    <app-series-card *ngIf="!serie.isKeepWatching" [cardImage]="serie.cardImage" ></app-series-card>
-</div>
-
-<h2>KEEP WATCHING</h2>
-<div *ngFor="let serie of series">
-    
-    <app-series-card *ngIf="serie.isKeepWatching" [cardImage]="serie.cardImage" ></app-series-card>
-</div>
-
+<app-category-carrousel [category]="'POPULAR'" [isKeepWatching]="true"></app-category-carrousel>
+<app-category-carrousel [category]="'KEEP WATCHING'" [isKeepWatching]="false"></app-category-carrousel>
