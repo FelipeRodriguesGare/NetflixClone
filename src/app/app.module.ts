@@ -16,6 +16,10 @@ import { NavbuttonComponent } from './main/nav-bar-main/nav-button/navbutton.com
 import { SeriesCardComponent } from './main/series-card/series-card.component';
 import { CategoryCarrouselComponent } from './main/category-carrousel/category-carrousel.component';
 import { ErrorComponentComponent } from './error-component/error-component.component';
+import { ModalModule } from './modal';
+import { ModalService } from './modal'
+
+
 
 @NgModule({
   declarations: [
@@ -37,7 +41,8 @@ import { ErrorComponentComponent } from './error-component/error-component.compo
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ModalModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
