@@ -1,5 +1,4 @@
-import { Component, OnInit, Input, Output } from '@angular/core';
-import { AppService } from '../app.service';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-main',
@@ -8,30 +7,8 @@ import { AppService } from '../app.service';
 })
 export class MainComponent implements OnInit {
 
-  userIDs:number[] = [];
-  series:Object[]  = []
 
-  constructor(private appService:AppService) { }
-
-  getSeriesID(userID:number){
-    this.appService.getUserInfo(userID).subscribe(categories=>{
-     const idsArray = Object.values(categories).flat()
-      this.userIDs = idsArray
-      this.getSeries(this.userIDs)
-    })
-    
-  }
-
-  getSeries(idsList:number[]){
-    idsList.map(id=>{
-      this.appService.getSeriesInfo(id).subscribe(serie=>{
-        this.series.push(serie)
-      })
-    })
-  }
   ngOnInit(): void {
-    
-    this.getSeriesID(1)
-  }
 
+  }
 }

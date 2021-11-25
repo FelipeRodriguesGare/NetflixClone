@@ -1,5 +1,99 @@
-.test {
-    width: 100vw;
-    height: 50vh;
+$netflixVermelho: #E50914;
+$netflixPreto: #000000;
+$netflixCinza: #E5E5E5;
+
+.mainContainer {
+    color: white;
+    text-align: center;
     background-color: #000000;
 }
+
+.containerOne {
+    background-color: $netflixPreto;
+    background-image: url(../../assets/images/netflixBackground1.png);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-bottom: 10px solid #222222
+}
+
+
+.containerOne h1 {
+    font-size: 3rem;
+    line-height: 90px;
+    font-weight: 800;
+}
+
+.containerOne h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 58px;
+    padding: 0 20px 0 20px;
+}
+
+
+.containerOne section {
+    max-width: 50%;
+    margin: 0 auto;
+    max-width: 650px;
+    margin: 100px auto;
+}
+
+.btnNetflix {
+    width: 220px;
+    height: 80px;
+    font-size: 1.6rem;
+    color: white;
+    background-color: #E50914;
+    border: none;
+    border-radius: 10px;
+}
+
+.btnNetflix:hover {
+    background-color: #FD000D;
+}
+
+// -----
+.containerTwo {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-bottom: 10px solid #222222;
+    padding: 20px 0;
+}
+
+.containerTwo section {
+    min-width: 400px;
+}
+
+.containerTwoText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 20px;
+    text-align: left;
+    max-width: 600px;
+}
+.containerTwoText h1 {
+    font-size: 3rem;
+}
+.containerTwoText h3 {
+    margin-top: 20px;
+    font-size: 1.6rem;
+
+}
+
+.imageSection {
+    position: relative;
+    justify-content: center;
+}
+
+.logoTv {
+    position: absolute;
+    top: 35%;
+    left: 35%;
+}
+//----

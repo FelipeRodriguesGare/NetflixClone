@@ -1,0 +1,31 @@
+.Container {
+    z-index: 2;
+    background-color: black;
+    height: 68px;
+    position: absolute;
+    top: 0;
+    width: 100vw;
+}
+
+.navContainer {
+    padding: 0 4%;    
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 92%;
+}
+
+.buttonsContainer {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    width: fit-content;
+    justify-content: center;
+}
+
+.avatarImg {
+    width: 32px;
+    height: 32px;
+    border-radius: 5px;
+}

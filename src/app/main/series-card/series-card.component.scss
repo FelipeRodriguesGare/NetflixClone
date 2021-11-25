@@ -1,0 +1,15 @@
+.series-image-wrapper img{
+    width: 100%;
+}
+
+.series-image-wrapper {
+    width: 15vw;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: width 0.2s;
+}
+
+.series-image-wrapper:hover {
+    width: 17vw;
+}
+

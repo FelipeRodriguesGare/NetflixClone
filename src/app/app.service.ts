@@ -8,6 +8,28 @@ export interface userResponse{
   ]
 }
 
+export interface seriesID{
+  popular:number[],
+  keepWatching:number[]
+}
+
+export interface serie{
+  id?:number,
+  isKeepWatching?:boolean,
+  cardImage: string,
+  titleImage: string,
+  backgroundImage: string,
+  relevance: number,
+  year: number,
+  minAge: number,
+  time: number,
+  season: unknown,
+  description: string,
+  cast: string[],
+  genre: string[],
+  scenes: string[]
+}
+
 export interface users {
   "id": number,
   "name": string,
