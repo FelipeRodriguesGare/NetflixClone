@@ -1,12 +1,31 @@
 <div class="container">
+    <img src="../../assets/images/netflixBackground1.png" alt="">
     <div class="boxLogin">
         <div class="loginInfo">
             <h1>Entrar</h1>
-            <input #emailPhone type="text" placeholder="Email ou número de telefone" id="">
-            <input #password type="password" placeholder="senha" id="">
-            <br>
-            <button (click)='logIn(emailPhone.value, password.value)'>Entrar</button>
-            <p>Essa página é protegida pelo google reCAPTCHA para garantir que você não é um robô. <a>Saiba mais</a></p>
+            
+            <form [formGroup]="father" (ngSubmit)=logIn()>
+                <input formControlName="emailPhone" type="text" placeholder="Email ou número de telefone" id="">
+                <ng-container>
+                    <p class='error' *ngIf="father.controls['emailPhone'].invalid && father.controls['emailPhone'].touched">
+                        Informe um e-mail ou número de telefone válido.
+                    </p>
+                </ng-container>
+                <input formControlName="password" type="password" placeholder="senha" id="">
+                <ng-container>
+                    <p class='error' *ngIf="father.controls['password'].hasError('minlength') || father.controls['password'].hasError('minlength') || father.controls['password'].invalid && father.controls['password'].touched">
+                        A senha deve ter entre 4 e 60 caracteres.
+                    </p>
+                </ng-container>
+                <br>
+                <button>Entrar</button>
+            </form>
+            <p>Essa página é protegida pelo google reCAPTCHA para garantir que você não é um robô. <a [routerLink]="[]" (click)="turnKhowMore()">Saiba mais</a></p>
+            <div class='knowMore' *ngIf='knowMore'>
+                <p>
+                    As informações recolhidas pelo Google reCAPTCHA estão sujeitas a Política de Privacidade e Termos de Uso, e são usadas para oferecer, manter e melhorar o serviço reCAPTCHA e por questões de segurança não são usadas para exibir anúncios personalizados pelo Google.
+                </p>
+            </div>
         </div>
     </div>
 </div>
