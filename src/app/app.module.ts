@@ -13,7 +13,9 @@ import { FooterComponent } from './footer/footer.component';
 import { UserCardComponent } from './users/user-card/user-card.component';
 import { NavBarMainComponent } from './main/nav-bar-main/nav-bar-main.component';
 import { NavbuttonComponent } from './main/nav-bar-main/nav-button/navbutton.component';
-
+import { SeriesCardComponent } from './main/series-card/series-card.component';
+import { CategoryCarrouselComponent } from './main/category-carrousel/category-carrousel.component';
+import { ErrorComponentComponent } from './error-component/error-component.component';
 
 @NgModule({
   declarations: [
@@ -28,8 +30,8 @@ import { NavbuttonComponent } from './main/nav-bar-main/nav-button/navbutton.com
     NavBarMainComponent,
     NavbuttonComponent,
     SeriesCardComponent,
-    CategoryCarrouselComponent
-
+    CategoryCarrouselComponent,
+    ErrorComponentComponent
   ],
   imports: [
     BrowserModule,
