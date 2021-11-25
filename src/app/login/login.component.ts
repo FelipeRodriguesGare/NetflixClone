@@ -11,6 +11,8 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
+
+//Referente ao footer
 export class LoginComponent implements OnInit {
   contactInfo:string = '0800-761-4631'
   footerInfo:links[] = [
@@ -25,6 +27,7 @@ export class LoginComponent implements OnInit {
   father: FormGroup;
   knowMore: boolean = false;
 
+  //Declaração dos inputs no form group
   constructor(private fb: FormBuilder, private appService: AppService, private route: Router, private authService: AuthService) {
     this.father = this.fb.group({
       emailPhone: [null,Validators.required],
@@ -36,13 +39,15 @@ export class LoginComponent implements OnInit {
   }
 
   logIn() {
+    //A lógica para invalidar os campos é caso sejam inválidos e tenham sido tocados, porém, caso aperte login direto eles não terão sido tocados, a lógica abaixo é para isso.
     if(this.father.invalid){
       Object.keys(this.father.controls).forEach(camps=>{
         const camp = this.father.get(camps)
         camp?.markAllAsTouched();
       })
-      return;
+      return true;
     }
+    //Realização do POST
     return this.appService.doLogin(this.father.get('emailPhone')?.value, this.father.get('password')?.value).subscribe((resultado) =>{ 
       this.appService.user = resultado;
       localStorage.setItem('token',resultado.token);
@@ -50,8 +55,8 @@ export class LoginComponent implements OnInit {
     })
   }
 
+  //Ao realizar o click na tag <a> muda o status e mostra o conteudo do saiba mais.
   turnKhowMore(){
     this.knowMore = !this.knowMore;
-    console.log(this.knowMore)
   }
 }
