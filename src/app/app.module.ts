@@ -10,9 +10,10 @@ import { LoginComponent } from './login/login.component';
 import { UsersComponent } from './users/users.component';
 import { MainComponent } from './main/main.component';
 import { FooterComponent } from './footer/footer.component';
-import { UserCardComponent } from './user-card/user-card.component';
-import { SeriesCardComponent } from './main/series-card/series-card.component';
-import { CategoryCarrouselComponent } from './main/category-carrousel/category-carrousel.component';
+import { UserCardComponent } from './users/user-card/user-card.component';
+import { NavBarMainComponent } from './main/nav-bar-main/nav-bar-main.component';
+import { NavbuttonComponent } from './main/nav-bar-main/nav-button/navbutton.component';
+
 
 @NgModule({
   declarations: [
@@ -24,8 +25,11 @@ import { CategoryCarrouselComponent } from './main/category-carrousel/category-c
     MainComponent,
     FooterComponent,
     UserCardComponent,
+    NavBarMainComponent,
+    NavbuttonComponent,
     SeriesCardComponent,
     CategoryCarrouselComponent
+
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,20 @@
+input {
+    display: none;
+}
+
+label {
+    color: #e5e5e5;
+    margin-left: 18px;
+    cursor: pointer;    
+    font-size: 88%;
+}
+
+label:hover {
+    color: #b3b3b3;
+}
+
+input:checked + label{
+    color: white;
+    cursor: default;
+    font-weight: 700;
+}
