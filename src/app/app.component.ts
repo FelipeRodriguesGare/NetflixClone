@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnChanges, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AppService } from './app.service';
 
@@ -11,6 +11,5 @@ export class AppComponent {
   constructor (private router:Router, private http: AppService) { }
   
   ngOnInit() {
-    this.router.navigate(['main/1'])
   }
 }
