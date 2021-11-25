@@ -14,6 +14,7 @@ import { UserCardComponent } from './users/user-card/user-card.component';
 import { NavBarMainComponent } from './main/nav-bar-main/nav-bar-main.component';
 import { NavbuttonComponent } from './main/nav-bar-main/nav-button/navbutton.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +26,10 @@ import { NavbuttonComponent } from './main/nav-bar-main/nav-button/navbutton.com
     FooterComponent,
     UserCardComponent,
     NavBarMainComponent,
-    NavbuttonComponent
+    NavbuttonComponent,
+    SeriesCardComponent,
+    CategoryCarrouselComponent
+
   ],
   imports: [
     BrowserModule,

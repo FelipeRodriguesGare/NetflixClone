@@ -1,1 +1,16 @@
+
 <app-nav-bar-main></app-nav-bar-main>
+
+
+<h2>POPULAR</h2>
+<div *ngFor="let serie of series">
+    
+    <app-series-card *ngIf="!serie.isKeepWatching" [cardImage]="serie.cardImage" ></app-series-card>
+</div>
+
+<h2>KEEP WATCHING</h2>
+<div *ngFor="let serie of series">
+    
+    <app-series-card *ngIf="serie.isKeepWatching" [cardImage]="serie.cardImage" ></app-series-card>
+</div>
+
