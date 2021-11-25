@@ -11,6 +11,18 @@
     height: 100vh;
 }
 
+img {
+    position: absolute;
+    z-index: -1;
+    overflow: hidden;
+}
+
+a {
+    cursor: pointer;
+    color: #0080ff;
+    text-decoration: underline;
+}
+
 .boxLogin {
     display: flex;
     position: relative;
@@ -67,4 +79,16 @@ p {
     width: 230px;
     margin-top: 5px;
     color: white;
+}
+
+.error {
+    margin-top: 0px;
+    margin-bottom: 5px;
+    color:#AF6C03;
+    font-size: 9px;
+
+}
+
+.knowMore {
+    margin-top: 10px;
 }
