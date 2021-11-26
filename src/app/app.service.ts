@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
 export interface userResponse{
   "token": string,
   "users": [
-    users    
+    users
   ]
 }
 
@@ -22,7 +22,7 @@ export interface serie{
   relevance: number,
   year: number,
   minAge: number,
-  time: number,
+  time?: number,
   season: unknown,
   description: string,
   cast: string[],
@@ -41,28 +41,21 @@ export interface users {
 })
 export class AppService {
 
-  constructor(private http:HttpClient) { 
-    
+  constructor(private http:HttpClient) {
+
   }
 
+  //Criado para recebimento do retorno do POST
   user: userResponse = {token: '', users: [{
     "id": 0,
     "name": '',
     "avatarUrl": ''
   }]};
 
-  treatResponse (response:string) {
-    var re = /"users"/gi;
-    let result = response.replace(re, ',"users"');
-    return JSON.parse(result) as userResponse
-  }
-
   doLogin(emailOrPhone:string,password:string){
-    return this.http.post('https://private-3923c4-santandercoders809.apiary-mock.com/login',{
+    return this.http.post<userResponse>('https://private-3923c4-santandercoders809.apiary-mock.com/login',{
         emailOrPhone:emailOrPhone,
         password:password
-    },{
-      responseType: 'text'
     })
   }
 
@@ -71,8 +64,8 @@ export class AppService {
   }
 
   getSeriesInfo(serieID:number){
-      return this.http.get(`https://private-3923c4-santandercoders809.apiary-mock.com/series/${serieID}`) 
+      return this.http.get(`https://private-3923c4-santandercoders809.apiary-mock.com/series/${serieID}`)
   }
-  
+
 
 }

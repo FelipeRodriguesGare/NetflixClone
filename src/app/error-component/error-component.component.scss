@@ -1,0 +1,22 @@
+.container {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--netflixPretoFosco);    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 3vw;
+    line-height: 40px;
+    color: white;    
+}
+
+@media screen and (max-width: 800px) {
+    
+    h1 {
+        font-size: 28px;
+    }
+
+}

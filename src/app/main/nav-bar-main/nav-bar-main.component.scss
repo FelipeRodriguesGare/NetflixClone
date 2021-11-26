@@ -1,0 +1,129 @@
+.Container {
+    z-index: 2;
+    background-image: linear-gradient(to bottom,rgba(0,0,0,.7) 10%,rgba(0,0,0,0));
+    height: 68px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    transition: background-color .4s;
+}
+
+.navBackgroundBlack {
+    background-color: rgb(20, 20, 20);
+    position: fixed;
+}
+
+.navContainer {
+    padding: 0 4%;    
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 92%;
+}
+
+.buttonsContainer {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    width: fit-content;
+    justify-content: center;
+    padding-left: 23px;
+}
+
+.buttonsContainer li {
+    padding-bottom: 4px;
+}
+
+.leftContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logoConfig {
+    width: 6.8vw;
+    min-width: 93px;
+}
+
+.avatarImg {
+    width: 32px;
+    height: 32px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.iconNotification {
+    width: 1.9vw;
+    height: 1.7vw;
+    min-width: 18px;
+    min-height: 16px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.iconSearch {
+    width: 1.3vw;
+    height: 1.3vw;
+    min-width: 15px;
+    min-height: 15px;
+    margin-right: 27px;
+    cursor: pointer;
+}
+
+.hamburgerContainer, .hamburgerContainer div  {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    padding: 0 10px
+}
+
+.imgMargin {
+    margin-left: 20px;
+}
+
+.hamburgerContainer div img {
+    width: 84px;
+}
+
+.hamburgerContainer input {
+    width: 25.5vw;
+    background-color: black;
+    border: solid 1px white;
+    margin-right: 10px;
+    padding: 4px 8px
+}
+
+@media screen and (max-width: 400px){
+    .Container{
+        height: 50px !important;   
+        background-color: black; 
+    }
+
+    .navBackgroundBlack {
+        background-image: none;
+        // background-color: #999;
+        background-color: #00000099;
+        position: fixed;
+    }
+
+}
+
+@media screen and (max-width: 950px){
+    .Container{
+        height: 41px;    
+    }
+
+    .logoConfig {
+        min-width: 76px;    
+    }
+
+    .buttonsContainer {
+        padding-left: 4px;
+    }
+
+    .buttonsContainer li {
+        padding-bottom: 7px;
+    }
+}

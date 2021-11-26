@@ -1,1 +1,9 @@
-<p>category-carrousel works!</p>
+<h2>{{ category }}</h2>
+<div class="wrapper">
+  <div *ngFor="let serie of series">
+    <app-series-card
+      *ngIf="!serie.isKeepWatching === isKeepWatching"
+      [serieObj]="serie"
+    ></app-series-card>
+  </div>
+</div>
