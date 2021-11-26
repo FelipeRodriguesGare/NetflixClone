@@ -1,6 +1,7 @@
 import { serie } from '../../services/app.service';
 import { Component, Input, OnInit } from '@angular/core';
 import { ModalService } from  "src/app/modal/modal.service"
+
 @Component({
   selector: 'app-series-card',
   templateUrl: './series-card.component.html',
@@ -14,14 +15,12 @@ export class SeriesCardComponent implements OnInit {
   @Input() serieObj: serie;
 
   logText() {
-    console.log(this.serieObj)
   }
 
   onClick(event) {
     var target = event.target || event.srcElement || event.currentTarget;
     var idAttr = target.attributes.src;
     let value = idAttr.nodeValue
-    console.log(value)
   }
 
   secondsToHms(d) {

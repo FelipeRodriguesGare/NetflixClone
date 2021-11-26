@@ -1,4 +1,3 @@
-import { ChangeDetectionStrategy } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { HostListener } from "@angular/core";
 import { ActivatedRoute } from '@angular/router';

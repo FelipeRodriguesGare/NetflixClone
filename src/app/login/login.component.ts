@@ -1,10 +1,10 @@
 import { AuthGuard } from './../auth/auth.guard';
 import { AuthService } from './../auth/auth.service';
 import { Router } from '@angular/router';
-import { AppService, users, userResponse } from '../services/app.service';
-import { Component, OnInit, Input } from '@angular/core';
+import { AppService } from '../services/app.service';
+import { Component, OnInit } from '@angular/core';
 import	{ links } from './../footer/footer.component';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 
 @Component({

@@ -1,5 +1,4 @@
-﻿import { serie } from '../services/app.service';
-import { Injectable } from '@angular/core';
+﻿import { Injectable } from '@angular/core';
 
 @Injectable({ providedIn: 'root' })
 export class ModalService {

@@ -4,7 +4,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BackgroundComponent } from './background/background.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { UsersComponent } from './users/users.component';
@@ -26,7 +25,6 @@ import { HamburgerButtonComponent } from './main/nav-bar-main/nav-bar-hamburger-
 @NgModule({
   declarations: [
     AppComponent,
-    BackgroundComponent,
     HomeComponent,
     LoginComponent,
     UsersComponent,
