@@ -1,0 +1,22 @@
+input {
+    display: none;
+}
+
+label {
+    display: inline-block;
+    color: grey;
+    cursor: pointer;    
+    font-size: 16px;
+    font-weight: bolder;
+    padding-left: 20px;
+    line-height: 32px;
+    margin-bottom: 10px;
+}
+
+input:checked + label{
+    color: white;
+    cursor: default;
+    font-weight: 700;
+    padding-left: 17px;
+    border-left: red 3px solid;
+}

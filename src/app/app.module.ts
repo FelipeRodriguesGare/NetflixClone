@@ -16,6 +16,10 @@ import { NavbuttonComponent } from './main/nav-bar-main/nav-button/navbutton.com
 import { SeriesCardComponent } from './main/series-card/series-card.component';
 import { CategoryCarrouselComponent } from './main/category-carrousel/category-carrousel.component';
 import { ErrorComponentComponent } from './error-component/error-component.component';
+import { NavBarSelectButtonComponent } from './main/nav-bar-main/nav-bar-select-button/nav-bar-select-button.component';
+import { NavBarHamburgerMenuComponent } from './main/nav-bar-main/nav-bar-hamburger-menu/nav-bar-hamburger-menu.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HamburgerButtonComponent } from './main/nav-bar-main/nav-bar-hamburger-menu/hamburger-button/hamburger-button.component';
 
 @NgModule({
   declarations: [
@@ -31,13 +35,17 @@ import { ErrorComponentComponent } from './error-component/error-component.compo
     NavbuttonComponent,
     SeriesCardComponent,
     CategoryCarrouselComponent,
-    ErrorComponentComponent
+    ErrorComponentComponent,
+    NavBarSelectButtonComponent,
+    NavBarHamburgerMenuComponent,
+    HamburgerButtonComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

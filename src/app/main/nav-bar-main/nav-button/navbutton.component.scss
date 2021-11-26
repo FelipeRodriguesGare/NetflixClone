@@ -4,12 +4,15 @@ input {
 
 label {
     color: #e5e5e5;
-    margin-left: 18px;
+    margin-left: 20px;
     cursor: pointer;    
-    font-size: 88%;
+    font-size: 1.02vw;
 }
 
 label:hover {
+    transition-property: color;
+    transition-duration: 0.4s;
+    transition-timing-function: ease;
     color: #b3b3b3;
 }
 
@@ -17,4 +20,12 @@ input:checked + label{
     color: white;
     cursor: default;
     font-weight: 700;
+}
+
+@media screen and (max-width: 1330px) {
+    
+    label {
+        margin-left: 18px;
+    }
+
 }

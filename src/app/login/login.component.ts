@@ -41,7 +41,7 @@ export class LoginComponent implements OnInit {
         const camp = this.father.get(camps)
         camp?.markAllAsTouched();
       })
-      return;
+      return null;
     }
     return this.appService.doLogin(this.father.get('emailPhone')?.value, this.father.get('password')?.value).subscribe((resultado) =>{ 
       this.appService.user = resultado;

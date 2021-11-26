@@ -1,0 +1,25 @@
+<div class="container">
+    <input type="checkbox" id="checkbox-menu">
+
+    <label for="checkbox-menu" (click)="menuToggle()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+ 
+    <div class="menuModal" *ngIf="menuState" [@inOutAnimationModal]></div>
+    <div *ngIf="menuState" class="menuButtonsContainer" [@inOutAnimationMenu]>
+        <div class="menuHeader">
+            <div class="profileInfo">
+                <img src="{{userLogged.avatarUrl}}" alt="">
+                <h1>{{ userLogged.name }}</h1>
+            </div>
+            <ul>
+                <li *ngFor="let item of itens.profileButtons"><app-hamburger-button [text]="item.text" [radioGroup]="'navButtons'"></app-hamburger-button></li>
+            </ul>
+        </div>
+        <ul class="mainButtons">
+            <li *ngFor="let item of itens.mainButtons"><app-hamburger-button [text]="item.text" [radioGroup]="'navButtons'" [checked]="item.checked"></app-hamburger-button></li>
+        </ul>
+    </div>
+</div>

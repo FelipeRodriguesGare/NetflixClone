@@ -18,11 +18,7 @@ export class UserCardComponent implements OnInit {
 
   constructor(private route: Router) { }
 
-  ngOnInit(): void {
-    console.log(
-      this.user
-    )
-  }
+  ngOnInit(): void {  }
 
   userEnterAplication() {
     this.route.navigate(['main',this.user.id])

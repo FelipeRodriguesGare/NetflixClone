@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, DoCheck, OnInit } from '@angular/core';
 import { AppService, users } from '../app.service';
 
 @Component({
@@ -15,17 +14,9 @@ export class UsersComponent implements OnInit {
   }]
   edit = false
 
-  constructor(private router: Router, private http: AppService) { 
-
-  }
-
+  constructor(private http: AppService) { }
+  
   ngOnInit(): void {
-    // this.http.doLogin('teste@teste', '123456').subscribe((response:string) => {
-    //   let result = this.http.treatResponse(response)
-    //   this.http.user = result
-    //   this.users = result.users
-    //   console.log(this.users)
-    // })
     this.users = this.http.user.users
   }
 
