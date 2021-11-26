@@ -1,102 +1,101 @@
 @import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@300;400;700;900&family=Roboto&display=swap');
 
 jw-modal {
-    /* modals are hidden by default */
-    display: none;
+  /* modals are hidden by default */
+  display: none;
 
-    .jw-modal {
-        /* modal container fixed across whole screen */
-        position: fixed;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
+  .jw-modal {
+      /* modal container fixed across whole screen */
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
 
-        /* z-index must be higher than .jw-modal-background */
-        z-index: 1000;
+      /* z-index must be higher than .jw-modal-background */
+      z-index: 1000;
 
-        /* enables scrolling for tall modals */
-        overflow: auto;
+      /* enables scrolling for tall modals */
+      overflow: auto;
 
-        .jw-modal-body {
-            background: #fff;
-            margin: 35px auto;
-            width: 934px;
-            box-shadow: rgb(0 0 0 / 75%) 0px 3px 10px;
-            opacity: 1;
-            margin-bottom: 2em;
-            min-width: 850px;
-            border-radius: 5px;
-        }
-    }
+      .jw-modal-body {
+          background: #fff;
+          margin: 35px auto;
+          width: 90vw;
+          box-shadow: rgb(0 0 0 / 75%) 0px 3px 10px;
+          opacity: 1;
+          margin-bottom: 2em;
+          border-radius: 5px;
+      }
+  }
 
-    .jw-modal-background {
-        /* modal background fixed across whole screen */
-        position: fixed;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
+  .jw-modal-background {
+      /* modal background fixed across whole screen */
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
 
-        /* semi-transparent black  */
-        background-color: #000;
-        opacity: 0.75;
+      /* semi-transparent black  */
+      background-color: #000;
+      opacity: 0.75;
 
-        /* z-index must be below .jw-modal and above everything else  */
-        z-index: 900;
-    }
+      /* z-index must be below .jw-modal and above everything else  */
+      z-index: 900;
+  }
 }
 
 body.jw-modal-open {
     /* body overflow is hidden to hide main scrollbar when modal window is open */
     overflow: hidden;
+
 }
+
 .modal-top-side {
   position: relative;
 
   .modal-img {
-    width: 934px;
+    width: 90vw;
     position: relative;
     border-radius: 5px 5px 0 0;
   }
 
   .modal-img-title {
-    width: 650px;
+    width: 50vw;
     position: absolute;
-    transform: translate(-144%, 30%);
-    margin-left: 60px;
+    transform: translate(-170%, 60%);
   }
 
   .modal-exit-btn {
     position: absolute;
     z-index: 1000;
     border-radius: 100%;
-    width: 40px;
-    height: 40px;
+    width: 20px;
+    height: 20px;
     color: white;
     background-color: #141414;
     border: none;
-    font-size: 24px;
-    left: 93.5%;
+    font-size: 10px;
+    left: 92.5%;
     top: 4%;
   }
 
   .modal-watch-btn {
-    font-family: 'Martel Sans', sans-serif;
+    font-family: "Martel Sans", sans-serif;
     border: none;
     position: absolute;
     z-index: 1000;
-    font-size: 24px;
+    font-size: 14px;
     font-weight: 700;
     background-color: white;
     color: #141414;
     border-radius: 10px;
-    width: 180px;
-    height: 60px;
-    padding-right: 31px;
-    padding-left: 22px;
-    margin-left: 60px;
-    bottom: 13%;
+    width: 100px;
+    height: 40px;
+    padding-left: 8px;
+    margin-left: 5vw;
+    bottom: 10%;
     font-weight: 800;
   }
 
@@ -105,24 +104,22 @@ body.jw-modal-open {
   }
 }
 
-
 .modal-card {
   font-family: 'Martel Sans', sans-serif;
   background-color: #141414;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   border-radius: 0 0 5px 5px;
 
   .modal-left-side {
     font-weight: 400;
-    margin-bottom: 72px;
-    margin-left: 60px;
-    width: 63%;
+    margin-left: 15px;
+    width: 85vw;
     display: flex;
     flex-direction: column;
-    margin-top: 20px;
+    margin-top: 15px;
     align-self: flex-start;
 
     .modal-infos {
@@ -130,30 +127,29 @@ body.jw-modal-open {
       flex-direction: row;
       align-items: center;
       justify-content: flex-start;
-      font-size: 24px;
-
+      font-size: 15px;
 
       .modal-infos-relevance {
         color: #46D369;
-        margin-right: 22px;
+        margin-right: 12px;
         font-weight: 700;
       }
 
       .modal-infos-year{
         color: white;
-        margin-right: 22px;
+        margin-right: 12px;
       }
 
       .modal-infos-minAge {
         background-color: #EBC500;
-        width: 40px;
-        height: 40px;
+        width: 20px;
+        height: 20px;
         border-radius: 5px;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
         align-items: center;
-        margin-right: 22px;
+        margin-right: 12px;
 
         p {
           color: black;
@@ -169,47 +165,164 @@ body.jw-modal-open {
     }
 
     .modal-description {
-      margin-top: 47px;
+      margin-top: 15px;
       div {
         color: white;
-        font-size: 22px;
-        line-height: 28px;
+        font-size: 14px;
+        line-height: 18px;
       }
     }
   }
 
 
   .modal-details {
-    width: 37%;
+    width: 85vw;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    font-size: 14px;
-    line-height: 19px;
+    font-size: 12px;
+    line-height: 16px;
+    margin-top: 5px;
+    margin-left: 15px;
 
     .modal-details-item {
-      width: 100%;
+      width: 95%;
       display: inline-flex;
-      margin-left: 49px;
-
-      padding-top: 3px;
+      margin-top: 12px;
 
       div {
-
         span {
           color: #6E6E6E;
         }
-
         color: white;
-        width: 252px;
-        margin-top: 25px;
+      }
+    }
+  }
+
+  .modal-details:last-child {
+    margin-bottom: 30px;
+  }
+}
+
+@media only screen and (min-width: 940px){
+  jw-modal {
+    /* modals are hidden by default */
+    display: none;
+
+    .jw-modal {
+        /* modal container fixed across whole screen */
+
+        .jw-modal-body {
+            background: #fff;
+            margin: 35px auto;
+            width: 934px;
+            box-shadow: rgb(0 0 0 / 75%) 0px 3px 10px;
+            opacity: 1;
+            margin-bottom: 2em;
+            min-width: 850px;
+            border-radius: 5px;
+        }
+    }
+
+}
+
+
+  .modal-top-side {
+
+    .modal-img {
+      width: 934px;
+    }
+
+    .modal-img-title {
+      width: 650px;
+      transform: translate(-144%, 30%);
+      margin-left: 60px;
+    }
+
+    .modal-exit-btn {
+      width: 40px;
+      height: 40px;
+      font-size: 24px;
+      left: 93.5%;
+    }
+
+    .modal-watch-btn {
+      font-size: 24px;
+      width: 180px;
+      height: 60px;
+      padding-right: 31px;
+      padding-left: 22px;
+      margin-left: 60px;
+      bottom: 13%;
+    }
+
+  }
+
+
+  .modal-card {
+    flex-direction: row;
+
+    .modal-left-side {
+      margin-bottom: 72px;
+      margin-left: 60px;
+      width: 63%;
+      margin-top: 20px;
+
+      .modal-infos {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        font-size: 24px;
+
+        .modal-infos-relevance {
+          margin-right: 22px;
+        }
+
+        .modal-infos-year{
+          margin-right: 22px;
+        }
+
+        .modal-infos-minAge {
+          width: 40px;
+          height: 40px;
+          margin-right: 22px;
+        }
+
+      }
+
+      .modal-description {
+        margin-top: 47px;
+        div {
+          font-size: 22px;
+          line-height: 28px;
+        }
       }
     }
 
 
-  }
+    .modal-details {
+      width: 37%;
+      font-size: 14px;
+      line-height: 19px;
+      padding-top: 3px;
+      margin-top: 0px;
 
-  .modal-details:last-child {
-    margin-bottom: 93px;
+      .modal-details-item {
+        width: 100%;
+        margin-left: 49px;
+        margin-top: 0px;
+
+        div {
+          width: 252px;
+          margin-top: 25px;
+        }
+      }
+    }
+
+    .modal-details:last-child {
+      margin-bottom: 93px;
+    }
   }
 }
+
