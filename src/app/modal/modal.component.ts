@@ -12,7 +12,7 @@ import { ModalService } from './modal.service';
 export class ModalComponent implements OnInit, OnDestroy {
     @Input()
     id: string = "";
-    private element: any;
+    private element;
 
     constructor(private modalService: ModalService, private el: ElementRef) {
       this.element = el.nativeElement;
@@ -29,7 +29,7 @@ export class ModalComponent implements OnInit, OnDestroy {
         document.body.appendChild(this.element);
 
         // close modal on background click
-        this.element.addEventListener('click', (el:any)  => {
+        this.element.addEventListener('click', (el)  => {
             if (el.target.className === 'jw-modal') {
                 this.close();
             }
