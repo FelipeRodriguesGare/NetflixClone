@@ -1,8 +1,10 @@
-﻿import { Injectable } from '@angular/core';
+﻿import { serie } from './../app.service';
+import { Injectable } from '@angular/core';
 
 @Injectable({ providedIn: 'root' })
 export class ModalService {
     private modals: any[] = [];
+
 
     add(modal: any) {
         // add modal to array of active modals
@@ -18,6 +20,7 @@ export class ModalService {
         // open modal specified by id
         const modal = this.modals.find(x => x.id === id);
         modal.open();
+        console.log(id)
     }
 
     close(id: string) {

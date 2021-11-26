@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@300;400;700;900&family=Roboto&display=swap');
+
 jw-modal {
     /* modals are hidden by default */
     display: none;
@@ -12,17 +14,14 @@ jw-modal {
 
         /* z-index must be higher than .jw-modal-background */
         z-index: 1000;
-        
+
         /* enables scrolling for tall modals */
         overflow: auto;
 
         .jw-modal-body {
-            padding: 20px;
             background: #fff;
-
-            
             margin: 35px auto;
-            width: 900px;
+            width: 934px;
             box-shadow: rgb(0 0 0 / 75%) 0px 3px 10px;
             opacity: 1;
             margin-bottom: 2em;
@@ -42,7 +41,7 @@ jw-modal {
         /* semi-transparent black  */
         background-color: #000;
         opacity: 0.75;
-        
+
         /* z-index must be below .jw-modal and above everything else  */
         z-index: 900;
     }
@@ -51,4 +50,163 @@ jw-modal {
 body.jw-modal-open {
     /* body overflow is hidden to hide main scrollbar when modal window is open */
     overflow: hidden;
+}
+.modal-top-side {
+  position: relative;
+
+  .modal-img {
+    width: 934px;
+    position: relative;
+    border-radius: 5px 5px 0 0;
+  }
+
+  .modal-img-title {
+    width: 650px;
+    position: absolute;
+    transform: translate(-144%, 30%);
+    margin-left: 60px;
+  }
+
+  .modal-exit-btn {
+    position: absolute;
+    z-index: 1000;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    color: white;
+    background-color: #141414;
+    border: none;
+    font-size: 24px;
+  }
+
+  .modal-watch-btn {
+    font-family: 'Martel Sans', sans-serif;
+    border: none;
+    position: absolute;
+    z-index: 1000;
+    font-size: 24px;
+    font-weight: 700;
+    background-color: white;
+    color: #141414;
+    border-radius: 10px;
+    width: 180px;
+    height: 60px;
+    padding-right: 31px;
+    padding-left: 22px;
+    margin-left: 60px;
+    bottom: 13%;
+  }
+
+  .modal-watch-btn:hover {
+    opacity: 90%;
+  }
+}
+
+
+.modal-card {
+  font-family: 'Martel Sans', sans-serif;
+  background-color: #141414;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0 0 5px 5px;
+
+  .modal-left-side {
+    font-weight: 400;
+    margin-bottom: 72px;
+    margin-left: 60px;
+    width: 63%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    align-self: flex-start;
+
+    .modal-infos {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      font-size: 24px;
+
+
+      .modal-infos-relevance {
+        color: #46D369;
+        margin-right: 22px;
+        font-weight: 700;
+      }
+
+      .modal-infos-year{
+        color: white;
+        margin-right: 22px;
+      }
+
+      .modal-infos-minAge {
+        background-color: #EBC500;
+        width: 40px;
+        height: 40px;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-right: 22px;
+
+        p {
+          color: black;
+          font-weight: 900;
+          text-align: center;
+        }
+      }
+
+      .modal-infos-time {
+        color: white;
+      }
+
+    }
+
+    .modal-description {
+      margin-top: 47px;
+      div {
+        color: white;
+        font-size: 22px;
+        line-height: 28px;
+      }
+    }
+  }
+
+
+  .modal-details {
+    width: 37%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 14px;
+    line-height: 19px;
+
+    .modal-details-item {
+      width: 100%;
+      display: inline-flex;
+      margin-left: 49px;
+
+      padding-top: 3px;
+
+      div {
+
+        span {
+          color: #6E6E6E;
+        }
+
+        color: white;
+        width: 252px;
+        margin-top: 25px;
+      }
+    }
+
+
+  }
+
+  .modal-details:last-child {
+    margin-bottom: 93px;
+  }
 }

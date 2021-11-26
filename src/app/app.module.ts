@@ -12,8 +12,6 @@ import { MainComponent } from './main/main.component';
 import { FooterComponent } from './footer/footer.component';
 
 import { ModalModule } from './modal';
-import { ModalService } from './modal'
-
 
 import { UserCardComponent } from './users/user-card/user-card.component';
 import { NavBarMainComponent } from './main/nav-bar-main/nav-bar-main.component';

@@ -1,20 +1,21 @@
+
 import { Component, ViewEncapsulation, ElementRef, Input, OnInit, OnDestroy } from '@angular/core';
 
 import { ModalService } from './modal.service';
 
-@Component({ 
-    selector: 'jw-modal', 
-    templateUrl: 'modal.component.html', 
+@Component({
+    selector: 'jw-modal',
+    templateUrl: 'modal.component.html',
     styleUrls: ['modal.component.scss'],
     encapsulation: ViewEncapsulation.None
 })
 export class ModalComponent implements OnInit, OnDestroy {
-    @Input() 
+    @Input()
     id: string = "";
     private element: any;
 
     constructor(private modalService: ModalService, private el: ElementRef) {
-        this.element = el.nativeElement;
+      this.element = el.nativeElement;
     }
 
     ngOnInit(): void {
@@ -35,7 +36,7 @@ export class ModalComponent implements OnInit, OnDestroy {
         });
 
         // add self (this modal instance) to the modal service so it's accessible from controllers
-        this.modalService.add(this);
+      this.modalService.add(this);
     }
 
     // remove self from modal service when component is destroyed
@@ -47,12 +48,14 @@ export class ModalComponent implements OnInit, OnDestroy {
     // open modal
     open(): void {
         this.element.style.display = 'block';
-        document.body.classList.add('jw-modal-open');
+        document.body.classList.add('modal-open');
     }
 
     // close modal
     close(): void {
         this.element.style.display = 'none';
-        document.body.classList.remove('jw-modal-open');
-    }
+        document.body.classList.remove('modal-open');
+  }
+
+
 }

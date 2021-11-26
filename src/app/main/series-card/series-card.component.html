@@ -1,5 +1,63 @@
 <div>
-    <section class="series-image-wrapper">
-         <img [src]="cardImage" alt="">
-    </section>
+  <section class="series-image-wrapper">
+    <img
+      (click)="modalService.open('object-' + serieObj.id)"
+      (click)="logText()"
+      [src]="serieObj.cardImage"
+      id="test"
+      alt=""
+    />
+  </section>
 </div>
+
+<jw-modal id="{{ 'object-' + serieObj.id }}">
+  <div class="modal-top-side">
+    <button
+      class="modal-exit-btn"
+      (click)="modalService.close('object-' + serieObj.id)"
+    >
+      X
+    </button>
+    <button class="modal-watch-btn">&#9654;&nbsp; Assistir</button>
+    <img class="modal-img" [src]="serieObj.backgroundImage" alt="" />
+    <img class="modal-img-title" [src]="serieObj.titleImage" alt="" />
+  </div>
+  <div class="modal-card">
+    <div class="modal-left-side">
+      <div class="modal-infos">
+        <div class="modal-infos-relevance" *ngIf="serieObj.relevance">
+          {{ serieObj.relevance }}&#37; relevante
+        </div>
+        <div class="modal-infos-year" *ngIf="serieObj.year">
+          {{ serieObj.year }}
+        </div>
+        <div class="modal-infos-minAge" *ngIf="serieObj.minAge">
+          <p>{{ serieObj.minAge }}</p>
+        </div>
+        <div class="modal-infos-time" *ngIf="serieObj.time">
+          {{ secondsToHms(serieObj.time) }}
+        </div>
+      </div>
+      <div class="modal-description">
+        <div>{{ serieObj.description }}</div>
+      </div>
+    </div>
+    <div class="modal-details">
+      <div class="modal-details-item">
+        <div><span>Elenco:&nbsp;</span>{{ serieObj.cast.join(", ") }}</div>
+      </div>
+      <div class="modal-details-item">
+        <div>
+          <span>Gêneros:&nbsp;</span>
+          {{ capitalizeWords(serieObj.genre).join(", ") }}
+        </div>
+      </div>
+      <div class="modal-details-item">
+        <div>
+          <span>Cenas e momentos:&nbsp;</span>
+          {{ capitalizeWords(serieObj.scenes).join(", ") }}
+        </div>
+      </div>
+    </div>
+  </div>
+</jw-modal>

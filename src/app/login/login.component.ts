@@ -41,9 +41,9 @@ export class LoginComponent implements OnInit {
         const camp = this.father.get(camps)
         camp?.markAllAsTouched();
       })
-      return;
+      return true
     }
-    return this.appService.doLogin(this.father.get('emailPhone')?.value, this.father.get('password')?.value).subscribe((resultado) =>{ 
+    return this.appService.doLogin(this.father.get('emailPhone')?.value, this.father.get('password')?.value).subscribe((resultado) =>{
       this.appService.user = resultado;
       localStorage.setItem('token',resultado.token);
       this.route.navigate(['users'])
