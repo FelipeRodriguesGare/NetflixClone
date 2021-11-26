@@ -1,6 +1,6 @@
-<app-nav-bar-main></app-nav-bar-main>
-<app-category-carrousel [category]="'POPULAR'" [isKeepWatching]="true"></app-category-carrousel>
-<app-category-carrousel [category]="'KEEP WATCHING'" [isKeepWatching]="false"></app-category-carrousel>
-<div class="teste">
-    brubru
+<div class="container">
+    <app-nav-bar-main></app-nav-bar-main>
+    <app-main-static class="static"></app-main-static>
+    <app-category-carrousel [category]="'Populares na Netflix'" [isKeepWatching]="true"></app-category-carrousel>
+    <app-category-carrousel [category]="'Continuar assistindo como ' + user.name" [isKeepWatching]="false"></app-category-carrousel>
 </div>

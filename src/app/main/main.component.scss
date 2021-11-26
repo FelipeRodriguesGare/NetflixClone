@@ -1,3 +1,13 @@
-.teste {
-    height: 200vh;
+.container {
+    background-color: rgb(20, 20, 20);    
+    min-height: 110vh;
+}
+
+@media screen and (max-width: 500px){
+    .static {
+        display: none;
+    }
+    .container {
+        padding-top: 60px;
+    }
 }

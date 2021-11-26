@@ -1,6 +1,6 @@
 import { Component, OnChanges, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AppService } from './app.service';
+import { AppService } from './services/app.service';
 
 
 
