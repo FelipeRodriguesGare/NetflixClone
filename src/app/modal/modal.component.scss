@@ -77,6 +77,8 @@ body.jw-modal-open {
     background-color: #141414;
     border: none;
     font-size: 24px;
+    left: 93.5%;
+    top: 4%;
   }
 
   .modal-watch-btn {
@@ -95,10 +97,11 @@ body.jw-modal-open {
     padding-left: 22px;
     margin-left: 60px;
     bottom: 13%;
+    font-weight: 800;
   }
 
   .modal-watch-btn:hover {
-    opacity: 90%;
+    background-color: #e6e6e6;
   }
 }
 
