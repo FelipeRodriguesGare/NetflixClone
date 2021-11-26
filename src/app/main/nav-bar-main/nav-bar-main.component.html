@@ -1,0 +1,24 @@
+<div class="Container" (window:scroll)="onWindowScroll($event)" [ngClass]="{'navBackgroundBlack': navBackground}">
+    <div class="hamburgerContainer" *ngIf="screenWidth <= 414; else nav">
+        <div>
+            <app-nav-bar-hamburger-menu [itens]="navButtons"></app-nav-bar-hamburger-menu>
+            <img src="../../../assets/images/netflixLogo.png" class="imgMargin" alt="">
+        </div>
+        <input type="text" placeholder="Buscar">
+    </div>
+    <ng-template #nav>
+        <div class="navContainer">
+            <div class="leftContainer">
+                <img class="logoConfig" src="../assets/images/netflixLogo.png" alt="" >
+                <ul class="buttonsContainer">
+                    <li *ngFor="let item of navButtons.mainButtons"><app-nav-button [text]="item.text" [checked]="item.checked" [radioGroup]="'navButtons'"></app-nav-button></li>
+                </ul>
+            </div>
+            <div class="profileContainer">
+                <img class="iconSearch" src="../../../assets/images/searchIcon.png" alt="">
+                <img class="iconNotification" src="../../../assets/images/notification.png" alt="">
+                <img class="avatarImg" src="{{userLogged.avatarUrl}}" alt="">
+            </div>
+        </div>
+    </ng-template>
+</div>

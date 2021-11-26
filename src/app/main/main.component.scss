@@ -1,0 +1,24 @@
+.container {
+    background-color: rgb(20, 20, 20);    
+    min-height: 110vh;
+}
+
+.cardsDisplacement {
+    position: relative;
+    bottom: 80px    
+}
+
+@media screen and (max-width: 500px){
+    
+    .static {
+        display: none;
+    }
+
+    .container {
+        padding-top: 60px;
+    }
+
+    .cardsDisplacement {
+        bottom: 0px 
+    }
+}

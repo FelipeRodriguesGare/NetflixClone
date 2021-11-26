@@ -3,6 +3,32 @@
     --netflixVermelho: #E50914 !important;
     --netflixPreto: #000000 !important;
     --netflixCinza: #E5E5E5 !important;
+    --netflixCinzaEscuro: #6F6F6F !important;
+    --netflixPretoFosco: #141414 !important;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    overflow: overlay;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    position: absolute !important;
+    background: transparent !important; 
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.185);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(58, 57, 57, 0.623); 
 }
 
 
@@ -27,6 +53,7 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+    //Fonte 
 }
 
 /* make sure to set some focus styles for accessibility */
