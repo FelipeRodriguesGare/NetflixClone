@@ -8,7 +8,7 @@
                 <h1>Entrar</h1>
                 
                 <form [formGroup]="father" (ngSubmit)=logIn()>
-                    <input class='inputEmailPhone' pattern="^(?=\d{11})(\d)\1*(?!\1)\d+$|\w+@\w+.\w{2,3}\w+.\w{2,2})$" formControlName="emailPhone"  type="text" placeholder="Email ou número de telefone" id="">
+                    <input class='inputEmailPhone' pattern="^(?=\d{11})(\d)\1*(?!\1)\d+$|\w+@\w+.\w{2,3}|\w+@\w+.\w{2,3}\w+.\w{2,2}$" formControlName="emailPhone"  type="text" placeholder="Email ou número de telefone" id="">
                     <ng-template [ngIf]="father.controls['emailPhone'].invalid && father.controls['emailPhone'].touched">
                         <p class='error' >
                             Informe um e-mail ou número de telefone válido.
