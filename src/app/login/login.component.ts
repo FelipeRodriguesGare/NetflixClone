@@ -48,7 +48,7 @@ export class LoginComponent implements OnInit {
       return true;
     }
     //Realização do POST
-    return this.appService.doLogin(this.father.get('emailPhone')?.value, this.father.get('password')?.value).subscribe((resultado) =>{ 
+    return this.appService.doLogin(this.father.get('emailPhone')?.value, this.father.get('password')?.value).subscribe((resultado) =>{
       this.appService.user = resultado;
       localStorage.setItem('token',resultado.token);
       this.route.navigate(['users'])
