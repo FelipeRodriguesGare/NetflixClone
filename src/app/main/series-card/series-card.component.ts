@@ -1,4 +1,4 @@
-import { serie } from './../../app.service';
+import { serie } from '../../services/app.service';
 import { Component, Input, OnInit } from '@angular/core';
 import { ModalService } from  "src/app/modal/modal.service"
 @Component({

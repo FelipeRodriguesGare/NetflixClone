@@ -1,5 +1,5 @@
 import { Component, DoCheck, OnInit } from '@angular/core';
-import { AppService, users } from '../app.service';
+import { AppService, users } from '../services/app.service';
 
 @Component({
   selector: 'app-users',

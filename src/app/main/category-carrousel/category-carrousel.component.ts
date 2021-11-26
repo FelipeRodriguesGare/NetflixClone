@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { AppService, serie, seriesID } from 'src/app/app.service';
-import { UserInMainService } from '../user-in-main.service';
+import { AppService, serie, seriesID } from 'src/app/services/app.service';
+import { UserInMainService } from '../../services/user-in-main.service';
 
 @Component({
   selector: 'app-category-carrousel',

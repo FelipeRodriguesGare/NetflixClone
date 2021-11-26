@@ -1,5 +1,5 @@
 .container {
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     background-image: url(../../../assets/images/backgroundMain.png);
     background-position-x: center;
@@ -13,13 +13,13 @@
 
 .containerMain {
     color: #ffff;
-    max-width: 50%;
-    padding: 60px;
+    max-width: 36%;
+    padding: 4%;
+    padding-top: 0px;
 }
 
 .containerImgName {
     margin-bottom: 10%;
-    
     max-width: 650px;
 }
 
@@ -30,14 +30,19 @@
 }
 
 .topDez {
-
+    display: flex;
+    align-items: center;
     text-align: center;
     background-color: red;
-    width: 40px;
-    height: 40px;
+    width: 10.18%;
+    min-width: 30px;
+    max-width: 48px;
+    min-height: 30px;
+    height: 3.5vw;
     padding: 2px;
     border-radius: 10px;
-    font-size: 0.9rem;
+    font-size: 90%;
+    line-height: 1.2;
     font-weight: bold;
 }
 
@@ -52,29 +57,40 @@
     display: flex;
     flex-wrap: nowrap;
 }
+
 .containerDescrip p {
-    font-size: 1.6rem;
+    width: 100%;
+    font-size: 1.4vw;
     font-weight: 300;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
+    line-height: 1.25;
 }
 
 .containerDescrip button {
-    margin:  30px;
-    height: 60px;
-    padding: 15px 20px 15px 20px;
-    border-radius: 10px;
-    font-weight: bold;
-    font-size: 1.4rem;
+    height: 3.0vw;
+    padding: 0.68vw;
+    padding-left: 1.7vw;
+    padding-right: 2.05vw;
+    border-radius: 4px;
     border: none;
 }
 
 .btn1 {
     background-color: #ffffff;
-    min-width: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 11.3vw;
+    margin-right: 0.6vw;
 }
 
-.btn1 img{
-    margin-right: 20px;
+.btn1 p{
+    margin-bottom: 0px;
+    width: fit-content;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 2px;
 }
 
 .btn1:hover {
@@ -84,14 +100,63 @@
 .btn2 {
     background-color: #ffffff67;
     color: #ffffff;
-    min-width: 300px;
-
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 18vw;
 }
 
 .btn2 img{
-    margin-right: 20px;
+    height: 2.4vw;
+    width: 2.4vw;
+}
+
+.btn2 p{
+    margin-bottom: 0px;
+    width: fit-content;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 2px;
+    font-size: 1.35vw;
 }
 
 .btn2:hover {
     background-color: #ffffff44;
+}
+
+@media screen and (max-width: 840px) {
+        
+    .containerDescrip button {
+        height: 4.94vw;
+        padding: 0.95vw;
+        padding-left: 2.4vw;
+        padding-right: 2.88vw;
+        border-radius: 4px;
+    }
+
+    .btn1 {
+        min-width: 16.3vw;
+        margin-right: 0.6vw;
+    }
+
+    .btn1 p{
+        margin-bottom: 0px;
+        font-size: 1.9vw;
+        padding-top: 2px;
+    }
+
+    .btn2 {
+        min-width: 24.56vw;
+    }
+    
+    .btn2 img{
+        height: 2.4vw;
+        width: 2.4vw;
+    }
+    
+    .btn2 p{
+        font-size: 1.9vw;
+    }
+    
 }

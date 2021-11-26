@@ -1,5 +1,40 @@
-.wrapper{
+.container {
+    display: block;
+    margin: 3vw 0;
+}
+
+.container:last-child {
+    margin-bottom: 0px;
+}
+
+
+.wrapper {
     display: flex;
-    overflow: scroll;
-    height: 15vw;
+    height: 11.3vw;
+    overflow-x: scroll;
+    margin: 0 4% 0 4%;
+}
+
+h2 {
+    color: white;
+    font-weight: bold;
+    font-size: 1.4vw;
+    margin: 0 4% 0.5em 4%    
+}
+
+@media screen and (max-width: 500px){
+    
+    .wrapper::-webkit-scrollbar {
+        display: none;
+    }
+
+    .wrapper{
+        height: fit-content;
+    }
+
+    h2 {
+        font-size: 5.12vw;
+        font-weight: bold;
+        color: #999;
+    }
 }

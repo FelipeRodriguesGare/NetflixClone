@@ -13,3 +13,16 @@
     width: 17vw;
 }
 
+@media screen and (max-width: 500px){
+    .series-image-wrapper {
+        width: 40vw;
+        margin-right: 10px;
+        cursor: pointer;
+        transition: width 0.2s;
+        padding: 0 0 2.5em 0
+    }
+
+    .series-image-wrapper:hover {
+        width: 50vw;
+    }
+}
