@@ -1,0 +1,97 @@
+.container {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../../../assets/images/backgroundMain.png);
+    background-position-x: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 650px;
+}
+
+.containerMain {
+    color: #ffff;
+    max-width: 50%;
+    padding: 60px;
+}
+
+.containerImgName {
+    margin-bottom: 10%;
+    
+    max-width: 650px;
+}
+
+.topBrasil {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+}
+
+.topDez {
+
+    text-align: center;
+    background-color: red;
+    width: 40px;
+    height: 40px;
+    padding: 2px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.topDez2 {
+    padding-top: 10px;
+    margin-left: 10px;
+    font-weight: bold;
+    font-size: 1.6rem;
+}
+
+.btnContainer {
+    display: flex;
+    flex-wrap: nowrap;
+}
+.containerDescrip p {
+    font-size: 1.6rem;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+.containerDescrip button {
+    margin:  30px;
+    height: 60px;
+    padding: 15px 20px 15px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 1.4rem;
+    border: none;
+}
+
+.btn1 {
+    background-color: #ffffff;
+    min-width: 160px;
+}
+
+.btn1 img{
+    margin-right: 20px;
+}
+
+.btn1:hover {
+    background-color: #ffffffa6;
+}
+
+.btn2 {
+    background-color: #ffffff67;
+    color: #ffffff;
+    min-width: 300px;
+
+}
+
+.btn2 img{
+    margin-right: 20px;
+}
+
+.btn2:hover {
+    background-color: #ffffff44;
+}

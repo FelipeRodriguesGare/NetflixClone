@@ -13,6 +13,7 @@ import { FooterComponent } from './footer/footer.component';
 import { UserCardComponent } from './user-card/user-card.component';
 import { SeriesCardComponent } from './main/series-card/series-card.component';
 import { CategoryCarrouselComponent } from './main/category-carrousel/category-carrousel.component';
+import { MainStaticComponent } from './main/main-static/main-static.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { CategoryCarrouselComponent } from './main/category-carrousel/category-c
     FooterComponent,
     UserCardComponent,
     SeriesCardComponent,
-    CategoryCarrouselComponent
+    CategoryCarrouselComponent,
+    MainStaticComponent
   ],
   imports: [
     BrowserModule,
