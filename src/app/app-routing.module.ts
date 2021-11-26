@@ -10,7 +10,7 @@ import { UsersComponent } from './users/users.component';
 const routes: Routes = [
   {path: "home", component: HomeComponent},
   {path: "login", component: LoginComponent},
-  {path: "main/:id", component: MainComponent},
+  {path: "main/:id", component: MainComponent, canActivate: [AuthGuard]},
   {path: "users", component: UsersComponent, canActivate: [AuthGuard]},
   {path: '', redirectTo: 'home', pathMatch: 'full' },
   {path: '**', component: ErrorComponentComponent}

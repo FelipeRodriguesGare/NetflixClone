@@ -1,9 +1,10 @@
+import { AuthGuard } from './../auth/auth.guard';
 import { AuthService } from './../auth/auth.service';
 import { Router } from '@angular/router';
-import { AppService, users, userResponse } from '../services/app.service';
-import { Component, OnInit, Input } from '@angular/core';
+import { AppService } from '../services/app.service';
+import { Component, OnInit } from '@angular/core';
 import	{ links } from './../footer/footer.component';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 
 @Component({
@@ -30,7 +31,7 @@ export class LoginComponent implements OnInit {
   phoneError = false;
 
   //Declaração dos inputs no form group
-  constructor(private fb: FormBuilder, private appService: AppService, private route: Router, private authService: AuthService) {
+  constructor(private authGuard:AuthGuard, private fb: FormBuilder, private appService: AppService, private route: Router, private authService: AuthService) {
     this.father = this.fb.group({
       emailPhone: [null,Validators.compose([Validators.required])],
       password: [null, Validators.compose([Validators.required, Validators.minLength(4), Validators.maxLength(60)])]
@@ -41,13 +42,20 @@ export class LoginComponent implements OnInit {
   }
 
   checkIfRepeat(event) {
-    if(this.stringPatern.test(event.target.value) && event.target.value.length >= 11) {
+    this.phoneError = false;
+    if(this.father.controls['emailPhone'].invalid && this.father.controls['emailPhone'].touched) {
       this.phoneError = true;
     }
-    else this.phoneError = false;
+    else if(this.father.controls['emailPhone'].invalid && event.target.value.length >= 12) {
+      this.phoneError = true;
+    }
+    else if(event.target.value.length == 11 && this.stringPatern.test(event.target.value)) {
+      this.phoneError = true;
+    }
+    else {
+      this.phoneError = false;
+    }
   } 
-
-  
 
   logIn() {
     //A lógica para invalidar os campos é caso sejam inválidos e tenham sido tocados, porém, caso aperte login direto eles não terão sido tocados, a lógica abaixo é para isso.
