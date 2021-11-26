@@ -1,9 +1,9 @@
+import { AuthGuard } from './../auth/auth.guard';
 import { AuthService } from './../auth/auth.service';
 import { Router } from '@angular/router';
 import { AppService, users, userResponse } from '../services/app.service';
 import { Component, OnInit, Input } from '@angular/core';
 import	{ links } from './../footer/footer.component';
-import { HostListener } from "@angular/core";
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 
@@ -27,12 +27,11 @@ export class LoginComponent implements OnInit {
 
   father: FormGroup;
   knowMore: boolean = false;
-  //stringPatern: string = "([a-zA-Z])\1*";
-  
-  //stringPatern = new RegExp("([a-zA-Z])\1*");
+  stringPatern:RegExp = new RegExp("^([0-9])\\1*$");
+  phoneError = false;
 
   //Declaração dos inputs no form group
-  constructor(private fb: FormBuilder, private appService: AppService, private route: Router, private authService: AuthService) {
+  constructor(private authGuard:AuthGuard, private fb: FormBuilder, private appService: AppService, private route: Router, private authService: AuthService) {
     this.father = this.fb.group({
       emailPhone: [null,Validators.compose([Validators.required])],
       password: [null, Validators.compose([Validators.required, Validators.minLength(4), Validators.maxLength(60)])]
@@ -42,14 +41,8 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
-    /* checkIfRepeat(event) {
-      
-      console.log(this.stringPatern.test(event.target.value));
-  } */
-
-  
-
   logIn() {
+
     //A lógica para invalidar os campos é caso sejam inválidos e tenham sido tocados, porém, caso aperte login direto eles não terão sido tocados, a lógica abaixo é para isso.
     if(this.father.invalid){
       Object.keys(this.father.controls).forEach(camps=>{

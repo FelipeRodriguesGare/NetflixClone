@@ -1,55 +1,61 @@
-<section class="mainContainer">
-    
-    <div class="containerOne">
-        <section>
-            <h1>Filmes, séries e muito mais. Sem limites.</h1>
-            <h3>Assista onde quiser. Cancele quando quiser.</h3>
-        </section>
-        <section>
-            <button type="button" class="btnNetflix" routerLink="/login">Entrar</button>
-        </section>
-    </div>
+<div class="container">
+    <nav class='logo'>
+        <img src="../../assets/images/netflixLogo.png" alt="">
+    </nav>
+    <section class="mainContainer">
+        
+        <div class="containerOne">
+            <section class="titleContainer">
+                <h1>Filmes, séries e muito mais. Sem limites.</h1>
+                <h3>Assista onde quiser. Cancele quando quiser.</h3>
+            </section>
+            <section class="buttonContainer">
+                <h4>Pronto para assistir? Clique no botão abaixo para ser redirecionado para a tela de login.</h4>
+                <button type="button" class="btnNetflix" routerLink="/login">Entrar</button>
+            </section>
+        </div>
 
-    <div class="containerTwo">
-        <section class="containerTwoText">
-            <h1>Aproveite na TV.</h1>
-            <h3>Assista em Smart TVs, PlayStation, Xbox, Chromecast, Apple TV, aparelhos de Blu-ray e outros dispositivos.</h3>
-        </section>
-        <section class="imageSection">
-            <img src="../../assets/images/homeImg1.png" alt="" width="100%" height="100%">
-            <img class="logoTv" src="../assets/images/netflixLogo.png"  width="30%" height="30%">
-        </section>
-    </div>
+        <div class="containerTwo">
+            <section class="containerTwoText">
+                <h1>Aproveite na TV.</h1>
+                <h3>Assista em Smart TVs, PlayStation, Xbox, Chromecast, Apple TV, aparelhos de Blu-ray e outros dispositivos.</h3>
+            </section>
+            <section class="imageSection">
+                <img src="../../assets/images/homeImg1.png" alt="" width="100%" height="100%">
+                <img class="logoTv" src="../assets/images/netflixLogo.png"  width="30%" height="30%">
+            </section>
+        </div>
 
-    <div class="containerTwo">
-        <section class="imageSection">
-            <img src="../../assets/images/homeImg2.png" alt="" width="100%" height="100%">
-        </section>
-        <section class="containerTwoText">
-            <h1>Baixe séries para assistir offline.</h1>
-            <h3>Salve seus títulos favoritos e sempre tenha algo para assistir.</h3>
-        </section>
-    </div>
-    
-    <div class="containerTwo">
-        <section class="containerTwoText">
-            <h1>Assista quando quiser.</h1>
-            <h3>Assista no celular, tablet, Smart TV ou notebook sem pagar a mais por isso.</h3>
-        </section>
-        <section class="imageSection">
-            <img src="../../assets/images/homeImg4.png" alt="" width="100%" height="100%">
-        </section>
-    </div>
+        <div class="containerTwo">
+            <section class="imageSection">
+                <img src="../../assets/images/homeImg2.png" alt="" width="100%" height="100%">
+            </section>
+            <section class="containerTwoText">
+                <h1>Baixe séries para assistir offline.</h1>
+                <h3>Salve seus títulos favoritos e sempre tenha algo para assistir.</h3>
+            </section>
+        </div>
+        
+        <div class="containerTwo">
+            <section class="containerTwoText">
+                <h1>Assista quando quiser.</h1>
+                <h3>Assista no celular, tablet, Smart TV ou notebook sem pagar a mais por isso.</h3>
+            </section>
+            <section class="imageSection">
+                <img src="../../assets/images/homeImg4.png" alt="" width="100%" height="100%">
+            </section>
+        </div>
 
-    <div class="containerTwo">
-        <section class="imageSection">
-            <img src="../../assets/images/homeImg3.png" alt="" width="100%" height="100%">
-        </section>
-        <section class="containerTwoText">
-            <h1>Crie perfis para crianças.</h1>
-            <h3>Deixe as crianças se aventurarem com seus personagens favoritos em um espaço feito só para elas, sem pagar a mais por isso.</h3>
-        </section>
-    </div>
-    
-</section>
-<app-footer [links]="footerList"></app-footer>
+        <div class="containerTwo">
+            <section class="imageSection">
+                <img src="../../assets/images/homeImg3.png" alt="" width="100%" height="100%">
+            </section>
+            <section class="containerTwoText">
+                <h1>Crie perfis para crianças.</h1>
+                <h3>Deixe as crianças se aventurarem com seus personagens favoritos em um espaço feito só para elas, sem pagar a mais por isso.</h3>
+            </section>
+        </div>
+        
+    </section>
+    <app-footer [links]="footerList" [contactInfo]="'0800-761-4631'"></app-footer>
+</div>
