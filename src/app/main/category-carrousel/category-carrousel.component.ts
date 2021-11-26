@@ -13,7 +13,7 @@ export class CategoryCarrouselComponent implements OnInit {
 
   userIDs:number[] = [];
   series:Array<serie> = [];
-  cardImage:string = ''
+  serieObj: serie;
 
   constructor(private appService:AppService, private userService: UserInMainService) { }
 
@@ -23,9 +23,8 @@ export class CategoryCarrouselComponent implements OnInit {
       this.userIDs = idsArray
       this.getSeries(this.userIDs)
     })
-    
+
   }
-  
 
  getSeries(idsList:number[]){
     idsList.map((id,index)=>{

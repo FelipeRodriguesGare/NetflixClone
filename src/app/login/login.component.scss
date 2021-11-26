@@ -45,7 +45,7 @@ a {
     margin-left: 40px;
 }
 
-input {
+input, .ng-untouched .ng-invalid {
     width: 220px;
     height: 30px;
     border-radius: 3px;
@@ -89,6 +89,14 @@ p {
     color:#AF6C03;
     font-size: 9px;
 
+}
+
+.inputEmailPhone.ng-touched.ng-invalid {
+    border-bottom: 2px solid #AF6C03;
+}
+
+.inputPassword.ng-touched.ng-invalid {
+    border-bottom: 2px solid #AF6C03;
 }
 
 .knowMore {
