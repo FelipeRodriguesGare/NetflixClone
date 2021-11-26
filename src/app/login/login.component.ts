@@ -45,14 +45,15 @@ export class LoginComponent implements OnInit {
     if(this.father.controls['emailPhone'].invalid && this.father.controls['emailPhone'].touched) {
       this.phoneError = true;
     }
-    else if(event.target.value.length === 11 && this.stringPatern.test(event.target.value)) {
+    else if(this.father.controls['emailPhone'].invalid && event.target.value.length >= 12) {
+      this.phoneError = true;
+    }
+    else if(event.target.value.length == 11 && this.stringPatern.test(event.target.value)) {
       this.phoneError = true;
     }
     else {
       this.phoneError = false;
     }
-
-    console.log(this.phoneError)
   } 
 
   
