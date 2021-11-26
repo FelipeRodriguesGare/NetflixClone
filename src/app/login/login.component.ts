@@ -3,7 +3,6 @@ import { Router } from '@angular/router';
 import { AppService, users, userResponse } from '../services/app.service';
 import { Component, OnInit, Input } from '@angular/core';
 import	{ links } from './../footer/footer.component';
-import { HostListener } from "@angular/core";
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 
@@ -27,9 +26,8 @@ export class LoginComponent implements OnInit {
 
   father: FormGroup;
   knowMore: boolean = false;
-  //stringPatern: string = "([a-zA-Z])\1*";
-  
-  //stringPatern = new RegExp("([a-zA-Z])\1*");
+  stringPatern:RegExp = new RegExp("^([0-9])\\1*$");
+  phoneError = false;
 
   //Declaração dos inputs no form group
   constructor(private fb: FormBuilder, private appService: AppService, private route: Router, private authService: AuthService) {
@@ -42,10 +40,12 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
-    /* checkIfRepeat(event) {
-      
-      console.log(this.stringPatern.test(event.target.value));
-  } */
+  checkIfRepeat(event) {
+    if(this.stringPatern.test(event.target.value) && event.target.value.length >= 11) {
+      this.phoneError = true;
+    }
+    else this.phoneError = false;
+  } 
 
   
 

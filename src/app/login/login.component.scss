@@ -4,6 +4,12 @@
     font-family: 'Martel Sans', sans-serif;
 }
 
+.outContainer {
+    background-color: #000000;
+    height: 100%;
+    overflow: hidden;
+}
+
 .container {
     display: flex;
     flex-direction: column;
@@ -16,51 +22,66 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border-bottom: 10px solid #222222
 }
 
 .logo {
     position: absolute;
     left: 3%;
-    top: 3%;
+    top: 0%;
 }
 
 a {
     cursor: pointer;
     color: #0080ff;
+    text-decoration: none;
+}
+
+a:hover {
     text-decoration: underline;
 }
 
 .boxLogin {
     display: flex;
     position: relative;
-    background-color: rgba(0, 0, 0, 0.5);
-    width: 310px;
-    height: 480px;
-    top: 50%;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0,0,0,.75);
+    width: 450px;
+    height: 500px;
+    top: 45vh;
     left: 50%;
     margin-right: -50%;
-    transform: translate(-50%, -50%)
+    transform: translate(-50%, -50%);
 }
 
 .loginInfo {
     display: flex;
     position: relative;
     flex-direction: column;
-    margin-top: 60px;
-    margin-left: 40px;
+    margin-top: 120px;
+    height: 100%;
+    width: 70%;
+}
+
+form {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
 }
 
 input, .ng-untouched .ng-invalid {
     width: 220px;
-    height: 30px;
+    height: 50px;
     border-radius: 3px;
     background-color: #333333;
     color: white;
     border: none;
     margin-bottom: 15px;
     padding-left: 10px;
-    font-size: 12px;
+    font-size: 14px;
+    width: 100%;
 }
 
 h1 {
@@ -71,38 +92,38 @@ h1 {
 }
 
 button {
-    width: 230px;
-    height: 35px;
-    border-radius: 10px;
+    height: 48px;
+    border-radius: 5px;
     border: none;
     background-color: #E50914;
     color: white;
-    font-size: 12px;
-    font-weight: 200;
+    font-size: 16px;
+    font-weight: bold;
     margin-bottom: 20px;
+    width: 100%;
 }
 
 p {
-    font-size: 9px;
-    width: 230px;
+    font-size: 13px;
     margin-top: 5px;
-    color: white;
+    line-height: 1.1;
+    color: #8c8c8c;
 }
 
 .error {
     margin-top: 0px;
     margin-bottom: 5px;
-    color:#AF6C03;
-    font-size: 9px;
-
+    color:#e87c03;
+    font-size: 13px;
+    width: 100%;
 }
 
 .inputEmailPhone.ng-touched.ng-invalid {
-    border-bottom: 2px solid #AF6C03;
+    box-shadow: 0px 2px 0px #e87c03;
 }
 
 .inputPassword.ng-touched.ng-invalid {
-    border-bottom: 2px solid #AF6C03;
+    box-shadow: 0px 2px 0px #e87c03;
 }
 
 .knowMore {
@@ -111,12 +132,28 @@ p {
 
 @media screen and (max-width: 400px){
     .container {
-        display: none;
         background-image: none;
         background-color: black;
+        height: 80vh;
+    }
+
+    .logo {
+        top: 0;
+        left: 3%;
+    }
+
+    .logo img {
+        width: 75px;
+        padding-top: 12px;
     }
 
     .background {
         display:none;
+    }
+
+    .boxLogin {
+        background-color: transparent;
+        top: 37vh;
+        left: 50%;
     }
 }
