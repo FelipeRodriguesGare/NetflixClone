@@ -141,7 +141,6 @@ body.jw-modal-open {
       }
 
       .modal-infos-minAge {
-        background-color: #EBC500;
         width: 20px;
         height: 20px;
         border-radius: 5px;
@@ -157,6 +156,20 @@ body.jw-modal-open {
           text-align: center;
         }
       }
+
+      .min-ageAll {
+        background-color: #014F86;
+      }
+      .min-age13 {
+        background-color: #EBC500;
+      }
+      .min-age16 {
+        background-color: #FF8E0C;
+            }
+      .min-age18 {
+        background-color: #EF0704;
+      }
+
 
       .modal-infos-time {
         color: white;

@@ -31,7 +31,16 @@
         <div class="modal-infos-year" *ngIf="serieObj.year">
           {{ serieObj.year }}
         </div>
-        <div class="modal-infos-minAge" *ngIf="serieObj.minAge">
+        <div
+          class="modal-infos-minAge"
+          *ngIf="serieObj.minAge"
+          [ngClass]="{
+            'min-ageAll': serieObj.minAge < 13,
+            'min-age13': serieObj.minAge >= 13 && serieObj.minAge < 16,
+            'min-age16': serieObj.minAge >= 16 && serieObj.minAge < 18,
+            'min-age18': serieObj.minAge >= 18
+          }"
+        >
           <p>{{ serieObj.minAge }}</p>
         </div>
         <div class="modal-infos-time" *ngIf="serieObj.time">
