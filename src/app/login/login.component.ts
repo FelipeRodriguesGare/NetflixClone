@@ -41,10 +41,18 @@ export class LoginComponent implements OnInit {
   }
 
   checkIfRepeat(event) {
-    if(this.stringPatern.test(event.target.value) && event.target.value.length >= 11) {
+    this.phoneError = false;
+    if(this.father.controls['emailPhone'].invalid && this.father.controls['emailPhone'].touched) {
       this.phoneError = true;
     }
-    else this.phoneError = false;
+    else if(event.target.value.length === 11 && this.stringPatern.test(event.target.value)) {
+      this.phoneError = true;
+    }
+    else {
+      this.phoneError = false;
+    }
+
+    console.log(this.phoneError)
   } 
 
   
