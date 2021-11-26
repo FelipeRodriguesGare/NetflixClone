@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { AppService, serie, seriesID } from 'src/app/app.service';
+import { UserInMainService } from '../user-in-main.service';
 
 @Component({
   selector: 'app-category-carrousel',
@@ -14,7 +15,7 @@ export class CategoryCarrouselComponent implements OnInit {
   series:Array<serie> = [];
   serieObj: serie;
 
-  constructor(private appService:AppService) { }
+  constructor(private appService:AppService, private userService: UserInMainService) { }
 
   getSeriesID(userID:number){
     this.appService.getUserInfo(userID).subscribe(categories=>{
@@ -24,7 +25,6 @@ export class CategoryCarrouselComponent implements OnInit {
     })
 
   }
-
 
  getSeries(idsList:number[]){
     idsList.map((id,index)=>{
@@ -47,8 +47,7 @@ export class CategoryCarrouselComponent implements OnInit {
 
 
   ngOnInit(): void {
-
-    this.getSeriesID(1)
+    this.getSeriesID(this.userService.userLogged.id)
     console.log(this.series)
   }
 
