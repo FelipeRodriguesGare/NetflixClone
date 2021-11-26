@@ -1,3 +1,4 @@
+import { AuthGuard } from './../auth/auth.guard';
 import { AuthService } from './../auth/auth.service';
 import { Router } from '@angular/router';
 import { AppService, users, userResponse } from '../services/app.service';
@@ -30,7 +31,7 @@ export class LoginComponent implements OnInit {
   phoneError = false;
 
   //Declaração dos inputs no form group
-  constructor(private fb: FormBuilder, private appService: AppService, private route: Router, private authService: AuthService) {
+  constructor(private authGuard:AuthGuard, private fb: FormBuilder, private appService: AppService, private route: Router, private authService: AuthService) {
     this.father = this.fb.group({
       emailPhone: [null,Validators.compose([Validators.required])],
       password: [null, Validators.compose([Validators.required, Validators.minLength(4), Validators.maxLength(60)])]
@@ -55,8 +56,6 @@ export class LoginComponent implements OnInit {
       this.phoneError = false;
     }
   } 
-
-  
 
   logIn() {
     //A lógica para invalidar os campos é caso sejam inválidos e tenham sido tocados, porém, caso aperte login direto eles não terão sido tocados, a lógica abaixo é para isso.

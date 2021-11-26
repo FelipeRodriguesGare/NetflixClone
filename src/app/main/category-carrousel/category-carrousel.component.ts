@@ -36,19 +36,23 @@ export class CategoryCarrouselComponent implements OnInit {
 
         serieWithID.id = Number(index+1)
 
-        this.appService.getUserInfo(1).subscribe((categories:seriesID)=>{
-          categories.keepWatching.includes(serieWithID.id)?isKeepWatching = true: isKeepWatching =  false
-          serieWithID.isKeepWatching =  isKeepWatching
-        })
-        this.series.push(serieWithID)
+        this.pushSeriesArray(serieWithID, isKeepWatching);
+        
       })
     })
+  }
+
+  pushSeriesArray(serieWithId, isKeepWatching){
+    this.appService.getUserInfo(this.userService.userLogged.id).subscribe((categories:seriesID)=>{
+      categories.keepWatching.includes(serieWithId.id)?isKeepWatching = true: isKeepWatching =  false
+      serieWithId.isKeepWatching =  isKeepWatching
+    })
+    this.series.push(serieWithId)
   }
 
 
   ngOnInit(): void {
     this.getSeriesID(this.userService.userLogged.id)
-    console.log(this.series)
   }
 
 
