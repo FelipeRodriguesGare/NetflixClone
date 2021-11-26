@@ -4,7 +4,7 @@ import { HostListener } from "@angular/core";
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
 import { AppService, users } from 'src/app/services/app.service';
-import { UserInMainService } from '../user-in-main.service';
+import { UserInMainService } from '../../services/user-in-main.service';
 import { WindowScrollService } from '../../services/window-scroll.service';
 
 @Component({

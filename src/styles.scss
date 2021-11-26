@@ -8,6 +8,29 @@
     font-family: 'Open Sans', sans-serif;
 }
 
+body {
+    overflow: overlay;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    position: absolute !important;
+    background: transparent !important; 
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.185);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(58, 57, 57, 0.623); 
+}
+
 
 // Reset css
 

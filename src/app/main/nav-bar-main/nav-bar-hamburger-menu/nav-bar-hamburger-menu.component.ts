@@ -1,7 +1,7 @@
 import { trigger, style, animate, transition } from '@angular/animations';
 import { Component, Input, OnInit } from '@angular/core';
 import { users } from 'src/app/services/app.service';
-import { UserInMainService } from '../../user-in-main.service';
+import { UserInMainService } from '../../../services/user-in-main.service';
 
 @Component({
   selector: 'app-nav-bar-hamburger-menu',
